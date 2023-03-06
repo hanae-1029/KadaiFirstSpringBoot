@@ -1,7 +1,7 @@
 package com.techacademy;
 
 import java.time.DayOfWeek;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.TextStyle;
 import java.util.Locale;
 
@@ -19,7 +19,7 @@ public class KadaiFirstController {
         int m = Integer.parseInt(ymd.substring(4, 5));
         int d = Integer.parseInt(ymd.substring(6, 7));
 
-        LocalDate a = LocalDate.of(y, m, d);
+        LocalDateTime a = LocalDateTime.of(y, m, d, 0, 0);
         DayOfWeek youbi = a.getDayOfWeek();
         String dn = youbi.getDisplayName(TextStyle.FULL, Locale.US);
 
