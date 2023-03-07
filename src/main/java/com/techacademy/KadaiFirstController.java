@@ -1,7 +1,7 @@
 package com.techacademy;
 
 import java.time.DayOfWeek;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.Locale;
 
@@ -16,10 +16,12 @@ public class KadaiFirstController {
     public static String getdispDayOfWeek(@PathVariable String ymd) {
 
         int y = Integer.parseInt(ymd.substring(0, 4));
-        int m = Integer.parseInt(ymd.substring(4, 5));
-        int d = Integer.parseInt(ymd.substring(6, 7));
+        int m = Integer.parseInt(ymd.substring(4, 6));
+        int d = Integer.parseInt(ymd.substring(6, 8));
 
-        LocalDateTime a = LocalDateTime.of(y, m, d, 0, 0);
+//     
+
+        LocalDate a = LocalDate.of(y, m, d);
         DayOfWeek youbi = a.getDayOfWeek();
         String dn = youbi.getDisplayName(TextStyle.FULL, Locale.US);
 
