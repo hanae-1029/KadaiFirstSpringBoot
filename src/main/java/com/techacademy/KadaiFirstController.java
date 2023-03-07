@@ -19,8 +19,6 @@ public class KadaiFirstController {
         int m = Integer.parseInt(ymd.substring(4, 6));
         int d = Integer.parseInt(ymd.substring(6, 8));
 
-//     
-
         LocalDate a = LocalDate.of(y, m, d);
         DayOfWeek youbi = a.getDayOfWeek();
         String dn = youbi.getDisplayName(TextStyle.FULL, Locale.US);
